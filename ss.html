@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Barbie World 💖</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #ffb6d9, #ff69b4, #ff1493);
+        }
+
+        .sparkle {
+            position: fixed;
+            color: white;
+            font-size: 25px;
+            animation: float 4s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        .s1 { top: 10%; left: 10%; }
+        .s2 { top: 20%; right: 12%; animation-delay: 1s; }
+        .s3 { bottom: 15%; left: 15%; animation-delay: 2s; }
+        .s4 { bottom: 10%; right: 10%; animation-delay: 0.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-20px) rotate(15deg); }
+        }
+
+        .card {
+            width: 100%;
+            max-width: 480px;
+            background: rgba(255, 255, 255, 0.94);
+            padding: 35px;
+            border-radius: 30px;
+            text-align: center;
+            border: 4px solid white;
+            box-shadow: 0 15px 40px rgba(190, 0, 100, 0.35);
+            position: relative;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: #ffe0f0;
+            color: #e60073;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .avatar {
+            margin: 22px auto 15px;
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffb6d9, #ff1493);
+            border: 5px solid #ff69b4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 58px;
+            box-shadow: 0 5px 20px #ffc0cb;
+        }
+
+        h1 {
+            color: #ff1493;
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #a64d79;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .details {
+            text-align: left;
+        }
+
+        .details p {
+            background: #fff0f7;
+            margin: 10px 0;
+            padding: 13px;
+            border-radius: 12px;
+            color: #8f2859;
+            border-left: 5px solid #ff69b4;
+            overflow-wrap: anywhere;
+        }
+
+        .details strong {
+            color: #e60073;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #ff1493, #ff69b4);
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px #ffc0cb;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.06);
+            box-shadow: 0 8px 20px #ff69b4;
+        }
+
+        #message {
+            color: #e60073;
+            margin-top: 18px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 25px;
+            color: #c21870;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sparkle s1">✨</div>
+    <div class="sparkle s2">💖</div>
+    <div class="sparkle s3">🎀</div>
+    <div class="sparkle s4">⭐</div>
+
+    <div class="card">
+
+        <div class="tag">WELCOME TO MY WORLD 🎀</div>
+
+        <div class="avatar">💗</div>
+
+        <h1 id="name"></h1>
+        <p class="subtitle">✨ Dream Big, Shine Bright ✨</p>
+
+        <div class="details">
+            <p><strong>🎓 Education:</strong> <span id="education"></span></p>
+            <p><strong>💻 Interest:</strong> <span id="interest"></span></p>
+            <p><strong>🎮 Hobby:</strong> <span id="hobby"></span></p>
+            <p><strong>🌍 Languages:</strong> <span id="languages"></span></p>
+            <p><strong>💖 My Motto:</strong> <span id="motto"></span></p>
+        </div>
+
+        <button onclick="showMessage()">
+            Click for Magic 💕
+        </button>
+
+        <p id="message"></p>
+
+        <footer>MADE WITH LOVE 💋 • MY PINK WORLD</footer>
+
+    </div>
+
+    <script>
+        // My personal details
+        let name = "Bhumik";
+        let education = "B.Sc. Computer Science";
+        let interest = "AI & Data Analytics";
+        let hobby = "Gaming & Anime";
+        let languages = "English, Hindi, Marathi";
+        let motto = "Believe in Yourself!";
+
+        // Display details on the webpage
+        document.getElementById("name").textContent =
+            "Hey, I'm " + name + "!";
+
+        document.getElementById("education").textContent = education;
+        document.getElementById("interest").textContent = interest;
+        document.getElementById("hobby").textContent = hobby;
+        document.getElementById("languages").textContent = languages;
+        document.getElementById("motto").textContent = motto;
+
+        // Button function
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "You are amazing, " + name + "! Keep sparkling! 💖✨";
+        }
+
+        // Console message
+        console.log("Welcome to my Barbie World, " + name + "! 🎀");
+    </script>
+
+</body>
+</html>
